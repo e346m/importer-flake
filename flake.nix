@@ -11,8 +11,8 @@
         in
         with pkgs;
         {
-          packages = {
-            importer = buildGoModule rec {
+          packages = rec {
+            importer = buildGoModule {
                 pname = "importer";
                 inherit version;
 
@@ -35,9 +35,8 @@
                   mainProgram = "importer";
                 };
             };
+            default = importer;
           };
-
-          defaultPackage = self.packages.${system}.importer;
         }
       );
   }
