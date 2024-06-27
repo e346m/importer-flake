@@ -35,7 +35,7 @@
                   mainProgram = "importer";
                 };
             };
-            default = importer;
+            defaultPackage = importer;
           };
         }
       );
